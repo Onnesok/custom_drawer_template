@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:ui';
 import 'package:custom_drawer/themes/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../Drawer_menu/about_details/about_lists.dart';
 
@@ -112,6 +113,7 @@ class _AboutScreenState extends State<AboutScreen> {
                                         _launched =
                                             _abouturl(profile.profileUrl!);
                                       });
+                                      Fluttertoast.showToast(msg: "Opening...");
 
                                       _launched!.whenComplete(() {
                                         setState(() {

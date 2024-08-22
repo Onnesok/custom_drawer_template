@@ -116,7 +116,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
                                 borderRadius:
                                 const BorderRadius.all(Radius.circular(30.0)),
                                 child: Image.asset(
-                                  'assets/images/logo.jpeg',
+                                  'assets/images/logo.png',
                                   fit: BoxFit.cover,
                                 ),
                               ),

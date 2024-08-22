@@ -24,7 +24,7 @@ final List<Profile> profiles = [
     name: 'Ratul Hasan',
     description:
     'Hello amazing Robu people.\nI am Introducing to you the Robotics Club(ROBU) App, a brainchild born out of a shared passion for technology, innovation, and a burning desire to make our club experience even more extraordinary.',
-    imagePath: 'assets/images/logo.jpeg',
+    imagePath: 'assets/images/logo.png',
     profileUrl: Uri.parse('https://www.github.com/onnesok'),
   ),
 ];

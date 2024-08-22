@@ -23,6 +23,7 @@ class HomeScreen extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppTheme.notWhite,
                   shadowColor: AppTheme.blueaccent,
+                  elevation: 10,
                 ),
                   onPressed: () {
                   Fluttertoast.showToast(msg: "Nothing to see here.....");
