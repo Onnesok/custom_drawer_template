@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../Drawer_menu/about_details/about_lists.dart';
+import '../url launcher/url_launcher.dart';
 
 class AboutScreen extends StatefulWidget {
   const AboutScreen({Key? key});
@@ -17,14 +18,7 @@ class _AboutScreenState extends State<AboutScreen> {
   Future<void>? _launched;
   bool _isLoading = false;
 
-  Future<void> _abouturl(Uri url) async {
-    if (!await launchUrl(
-      url,
-      mode: LaunchMode.externalApplication,
-    )) {
-      throw Exception('Could not launch $url');
-    }
-  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -79,20 +73,31 @@ class _AboutScreenState extends State<AboutScreen> {
                             ),
                           ),
                         const SizedBox(height: 16),
-                        Text(
-                          'About Developer\n${profile.name}',
-                          textAlign: TextAlign.center,
-                          style: AppTheme.headline,
+                        Column(
+                          children: [
+                            Text(
+                              'About Developer',
+                              textAlign: TextAlign.center,
+                              style: AppTheme.headline,
+                            ),
+                            Text(
+                              profile.name,
+                              textAlign: TextAlign.center,
+                              style: AppTheme.title,
+                            ),
+                          ],
                         ),
                         if (profile.description != null) ...[
                           const SizedBox(height: 16),
-                          Text(
-                            profile.description!,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 16),
+                          Container(
+                            child: Text(
+                              profile.description!,
+                              style: AppTheme.body1,
+                              textAlign: TextAlign.justify,
+                            ),
                           ),
                         ],
-                        const SizedBox(height: 30),
+                        const SizedBox(height: 20),
                         Text(
                           '(${profile.name})',
                           textAlign: TextAlign.start,
@@ -111,7 +116,7 @@ class _AboutScreenState extends State<AboutScreen> {
                                       setState(() {
                                         _isLoading = true;
                                         _launched =
-                                            _abouturl(profile.profileUrl!);
+                                            abouturl(profile.profileUrl!);
                                       });
                                       Fluttertoast.showToast(msg: "Opening...");
 
@@ -122,7 +127,7 @@ class _AboutScreenState extends State<AboutScreen> {
                                       });
                                     },
                                     child: const Text(
-                                      'See more about me',
+                                      'Visit github',
                                       style: AppTheme.button,
                                     ),
                                     style: ElevatedButton.styleFrom(

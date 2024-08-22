@@ -60,9 +60,10 @@ class AppTheme {
   static const TextStyle title = TextStyle(
     fontFamily: fontName,
     fontWeight: FontWeight.bold,
-    fontSize: 16,
+    fontSize: 24,
     letterSpacing: 0.18,
-    color: darkerText,
+    color: Colors.redAccent,
+    fontStyle: FontStyle.italic,
   );
 
   static const TextStyle subtitle = TextStyle(
@@ -83,9 +84,9 @@ class AppTheme {
 
   static const TextStyle body1 = TextStyle(
     fontFamily: fontName,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.normal,
     fontSize: 16,
-    letterSpacing: -0.05,
+    letterSpacing: 1,
     color: darkText,
   );
 
