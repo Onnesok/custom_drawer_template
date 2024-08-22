@@ -35,9 +35,11 @@ class AppTheme {
     fontFamily: fontName,
     fontWeight: FontWeight.bold,
     fontSize: 36,
-    letterSpacing: 0.4,
+    letterSpacing: 0.6,
     height: 0.9,
-    color: darkerText,
+    color: blueaccent,
+    fontStyle: FontStyle.italic,
+    backgroundColor: Colors.black12,
   );
 
   static const TextStyle button = TextStyle(

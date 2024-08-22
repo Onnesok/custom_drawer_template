@@ -12,22 +12,37 @@ class HomeScreen extends StatelessWidget {
         title: Text("Home"),
       ),
       body: Center(
-        child: SizedBox(
-          width: MediaQuery.of(context).size.width * 0.7,
-          height: MediaQuery.of(context).size.width * 0.7,
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: AppTheme.notWhite,
-              shadowColor: AppTheme.blueaccent,
-            ),
-              onPressed: () {
-              Fluttertoast.showToast(msg: "Nothing");
-              },
-              child: Icon(
-                Icons.power_settings_new_outlined,
-                size: MediaQuery.of(context).size.width * 0.35,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.5,
+              height: MediaQuery.of(context).size.width * 0.5,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppTheme.notWhite,
+                  shadowColor: AppTheme.blueaccent,
+                ),
+                  onPressed: () {
+                  Fluttertoast.showToast(msg: "Nothing to see here.....");
+                  Fluttertoast.showToast(msg: "This is a drawer app template...");
+                  Fluttertoast.showToast(msg: "Other functions are not focused...");
+                  },
+                  child: Icon(
+                    Icons.power_settings_new_outlined,
+                    size: MediaQuery.of(context).size.width * 0.35,
+                  ),
               ),
-          ),
+            ),
+
+            SizedBox(height: 30,),
+
+            Text(
+                "Nothing button",
+              style: AppTheme.display1,
+            ),
+          ],
         ),
       ),
     );
