@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../themes/app_theme.dart';
+
 class HelpScreen extends StatefulWidget {
   const HelpScreen({super.key});
 
@@ -28,13 +30,11 @@ class _HelpScreenState extends State<HelpScreen> {
           ),
         ),
         Container(
-          padding: const EdgeInsets.only(top: 16),
+          padding: const EdgeInsets.all(20),
           child: const Text(
-            'It looks like you are experiencing problems\n. We are here to\nhelp so please get in touch with us',
+            'If you are facing any problems feel free to get in touch with us. We are available for your support... This is the support or help page for the app... Feel free to contact us...',
             textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 16,
-            ),
+            style: AppTheme.body1,
           ),
         ),
         Expanded(
@@ -62,7 +62,7 @@ class _HelpScreenState extends State<HelpScreen> {
                       child: Padding(
                         padding: EdgeInsets.all(4.0),
                         child: Text(
-                          'Chat with Us',
+                          'Chat',
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             color: Colors.white,

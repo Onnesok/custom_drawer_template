@@ -11,21 +11,20 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Future<void>? _launched;
     bool _isLoading = false;
-    Uri facebook_url = Uri.parse("https://www.facebook.com/Onnesok.94");
+    Uri linkedin_url = Uri.parse("https://www.linkedin.com/in/ratul-hasan-45911b245/");
     Uri github_url = Uri.parse('https://www.github.com/onnesok');
     Uri youtube_url = Uri.parse('https://www.youtube.com/@Onnesok');
 
 
     return Scaffold(
+      backgroundColor: AppTheme.white,
       appBar: AppBar(
         title: Text("Home"),
         backgroundColor: AppTheme.white,
       ),
       body: Center(
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          color: AppTheme.white,
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
           child: Column(
             //mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -77,9 +76,14 @@ class HomeScreen extends StatelessWidget {
                   textAlign: TextAlign.justify,
                 ),
               ),
-              
+
               SizedBox(height: 20,),
-              
+
+              Container(
+                child: Text("Follow me on....", style: AppTheme.subtitle,),
+              ),
+              SizedBox(height: 5,),
+
               Container(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -106,10 +110,10 @@ class HomeScreen extends StatelessWidget {
 
                     GestureDetector(
                       onTap: () {
-                        abouturl(facebook_url);
+                        abouturl(linkedin_url);
                         Fluttertoast.showToast(msg: "Opening....");
                       },
-                      child: Image.asset("assets/images/facebook.png", scale: 14,),
+                      child: Image.asset("assets/images/linkedin.png", scale: 14,),
                     ),
                   ],
                 ),

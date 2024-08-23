@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../themes/app_theme.dart';
+
 class InviteFriend extends StatefulWidget {
   const InviteFriend({super.key});
 
@@ -28,13 +30,11 @@ class _InviteFriendState extends State<InviteFriend> {
           ),
         ),
         Container(
-          padding: const EdgeInsets.only(top: 16),
+          padding: const EdgeInsets.all(20),
           child: const Text(
-            'Want to enjoy robotics with your friends ? Invite your friends and grow together.',
+            'Invite yours friends and let them know about this platform.... Help them to get onboard...',
             textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 16,
-            ),
+            style: AppTheme.body1,
           ),
         ),
         Expanded(
