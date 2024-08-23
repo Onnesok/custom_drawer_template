@@ -9,8 +9,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Future<void>? _launched;
-    bool _isLoading = false;
+    //Future<void>? _launched;
     Uri linkedin_url = Uri.parse("https://www.linkedin.com/in/ratul-hasan-45911b245/");
     Uri github_url = Uri.parse('https://www.github.com/onnesok');
     Uri youtube_url = Uri.parse('https://www.youtube.com/@Onnesok');
@@ -18,10 +17,12 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: AppTheme.white,
+
       appBar: AppBar(
         title: Text("Home"),
         backgroundColor: AppTheme.white,
       ),
+
       body: Center(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
@@ -29,6 +30,7 @@ class HomeScreen extends StatelessWidget {
             //mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.5,
                 height: MediaQuery.of(context).size.width * 0.5,
@@ -52,6 +54,7 @@ class HomeScreen extends StatelessWidget {
                     Fluttertoast.showToast(msg: "This is a drawer app template...");
                     Fluttertoast.showToast(msg: "Other functions are not focused...");
                   },
+
                   child: Icon(
                     Icons.power_settings_new_outlined,
                     size: MediaQuery.of(context).size.width * 0.2,
@@ -118,7 +121,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 10,),
+              const SizedBox(height: 20,),
             ],
           ),
         ),

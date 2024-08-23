@@ -114,9 +114,18 @@ class _AboutScreenState extends State<AboutScreen> {
                           _isLoading
                               ? CircularProgressIndicator()
                               : SizedBox(
-                                width: MediaQuery.of(context).size.width * 0.5,
-                                height: MediaQuery.of(context).size.height * 0.055,
+                                width: MediaQuery.of(context).size.width * 0.6,
+                                height: MediaQuery.of(context).size.height * 0.06,
                                 child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    padding: const EdgeInsets.symmetric(vertical: 15,),
+                                    backgroundColor: AppTheme.blueaccent,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(30),
+                                    ),
+                                    elevation: 10,
+                                    shadowColor: AppTheme.blueaccent.withOpacity(0.5),
+                                  ),
                                     onPressed: () {
                                       setState(() {
                                         _isLoading = true;
@@ -131,12 +140,24 @@ class _AboutScreenState extends State<AboutScreen> {
                                         });
                                       });
                                     },
-                                    child: const Text(
-                                      'Visit github',
-                                      style: AppTheme.button,
-                                    ),
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.red,
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: <Widget>[
+                                        Image.asset(
+                                          "assets/images/github.png",
+                                          //scale: 10,
+                                        ),
+                                        SizedBox(width: 10),
+                                        Text(
+                                          'Visit Github',
+                                          style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                               ),

@@ -25,6 +25,7 @@ class _InviteFriendState extends State<InviteFriend> {
       backgroundColor: AppTheme.white,
       appBar: AppBar(
         title: Text("Invite"),
+        centerTitle: true,
         backgroundColor: AppTheme.white,
       ),
       body: Column(
