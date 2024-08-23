@@ -44,7 +44,6 @@ dev_dependencies:
 
 
 
-
 flutter_icons:
   ios: true
   android: true
