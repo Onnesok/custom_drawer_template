@@ -118,7 +118,7 @@ class _AboutScreenState extends State<AboutScreen> {
                                 height: MediaQuery.of(context).size.height * 0.06,
                                 child: ElevatedButton(
                                   style: ElevatedButton.styleFrom(
-                                    padding: const EdgeInsets.symmetric(vertical: 15,),
+                                    //padding: const EdgeInsets.symmetric(vertical: 15,),
                                     backgroundColor: AppTheme.blueaccent,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(30),
@@ -145,9 +145,10 @@ class _AboutScreenState extends State<AboutScreen> {
                                       children: <Widget>[
                                         Image.asset(
                                           "assets/images/github.png",
-                                          //scale: 10,
+                                          scale: 20,
                                         ),
                                         SizedBox(width: 10),
+
                                         Text(
                                           'Visit Github',
                                           style: TextStyle(
