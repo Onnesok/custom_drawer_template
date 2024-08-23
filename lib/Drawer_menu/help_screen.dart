@@ -33,7 +33,7 @@ class _HelpScreenState extends State<HelpScreen> {
           padding: const EdgeInsets.all(20),
           child: const Text(
             'If you are facing any problems feel free to get in touch with us. We are available for your support... This is the support or help page for the app... Feel free to contact us...',
-            textAlign: TextAlign.center,
+            textAlign: TextAlign.justify,
             style: AppTheme.body1,
           ),
         ),

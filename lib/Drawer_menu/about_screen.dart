@@ -27,6 +27,7 @@ class _AboutScreenState extends State<AboutScreen> {
 
     return Scaffold(
       extendBodyBehindAppBar: true,
+      backgroundColor: AppTheme.white,
       appBar: AppBar(
         title: Text("About", style: TextStyle(color: Colors.black87)),
         centerTitle: true,
@@ -38,7 +39,7 @@ class _AboutScreenState extends State<AboutScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // Profiles Section
+
               ListView.builder(
                 padding: EdgeInsets.all(16.0),
                 itemCount: profiles.length,
@@ -51,11 +52,15 @@ class _AboutScreenState extends State<AboutScreen> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(12.0),
+                      border: Border.all(
+                        width: 0.5,
+                        color: AppTheme.grey.withOpacity(0.2),
+                      ),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(0.2),
                           //offset: Offset(0, 4),
-                          //blurRadius: 10,
+                          //blurRadius: 24,
                         ),
                       ],
                     ),
